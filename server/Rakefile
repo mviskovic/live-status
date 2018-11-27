@@ -1,0 +1,10 @@
+require_relative 'app'
+require 'sinatra/activerecord/rake'
+
+desc 'Start a session'
+task :console do
+  require 'irb'
+
+  ARGV.clear
+  IRB.start
+end
