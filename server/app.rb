@@ -1,6 +1,11 @@
 require 'sinatra'
 require 'sinatra/cross_origin'
 
+set :database, 'sqlite3:ls-dev.sqlite3'
+
+cwd = Dir.pwd
+Dir["#{cwd}/models/*.rb"].each { |f| require f }
+
 configure do
   enable :cross_origin
 end
