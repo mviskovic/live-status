@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/activerecord'
 require 'sinatra/cross_origin'
 
 set :database, 'sqlite3:ls-dev.sqlite3'
